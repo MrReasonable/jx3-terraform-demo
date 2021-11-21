@@ -17,16 +17,20 @@ spec:
     registry: ghcr.io
   environments:
   - key: dev
+    owner: MrReasonable
+    repository: jx3-terraform-demo
   - key: staging
   - key: production
   ingress:
-    domain: "jx3.metatechnics.co.uk"
-    externalDNS: false
+    domain: jx3.metatechnics.co.uk
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: MrReasonable
   repository: bucketrepo
   secretStorage: local
   vault: {}
